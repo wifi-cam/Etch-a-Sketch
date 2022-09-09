@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
 </head>
 <body>
 
-    <div class="container"></div>
+    <div class="container">
+        
+        <div class="options">
+            <label for="canvasSize">Size of Canvas (0-99):</label>
+            <input type="range" id="size" name="size" min="1" max="150" value="16" onchange="adjustSize(this.value)">
+            <input type="color" class="color">
+            <!-- <button class="btn" id="reset">Reset</button> -->
+        </div>
+
+        <div class="canvas">
+            
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
