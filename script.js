@@ -1,4 +1,5 @@
 let sizeSlider = document.getElementById("size");
+let color = document.querySelector(".color");
 
 function createGrid(size) {
     let canvas = document.querySelector('.canvas');
@@ -28,5 +29,5 @@ function adjustSize(input) {
 }
 
 function draw() {
-    this.style.backgroundColor = 'black';
+    this.style.backgroundColor = color.value;
 }
