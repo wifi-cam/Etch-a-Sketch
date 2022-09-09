@@ -1,5 +1,6 @@
 let sizeSlider = document.getElementById("size");
 let color = document.querySelector(".color");
+let brushDown = false;
 
 function createGrid(size) {
     let canvas = document.querySelector('.canvas');
@@ -19,8 +20,10 @@ function createGrid(size) {
     }
 }
 
-let submit = document.querySelector('.submit');
-let range = document.querySelector('.size');
+window.addEventListener("mousedown", function(){
+    return brushDown = true})
+window.addEventListener("mouseup", function(){
+    return brushDown = false})
 
 createGrid(16);
 
@@ -29,5 +32,7 @@ function adjustSize(input) {
 }
 
 function draw() {
-    this.style.backgroundColor = color.value;
+    if(brushDown) {
+        return this.style.backgroundColor = color.value;
+    }
 }
