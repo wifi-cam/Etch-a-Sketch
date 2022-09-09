@@ -1,9 +1,10 @@
-let sizeSlider = document.getElementById("size");
-let color = document.querySelector(".color");
+const canvas = document.querySelector('.canvas');
+const sizeSlider = document.getElementById("size");
+const color = document.querySelector(".color");
+const reset = document.querySelector(".reset");
 let brushDown = false;
 
 function createGrid(size) {
-    let canvas = document.querySelector('.canvas');
     let pixels = canvas.querySelectorAll('div');
 
     pixels.forEach((div) => div.remove());
@@ -39,3 +40,8 @@ function draw() {
         return this.style.backgroundColor = color.value;
     }
 }
+
+reset.addEventListener('click', function(){
+    canvas.innerHTML = '';
+    createGrid();
+})

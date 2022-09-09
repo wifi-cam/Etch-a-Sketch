@@ -14,7 +14,7 @@ body {
     flex-direction: column;
 }
 
-.continer {
+.container {
     width: 700px;
 }
 
@@ -39,7 +39,7 @@ body {
     align-items: center;
 }
 
-.btn, input {
+.reset, input {
     background-color: #404040;
     height: 2rem;
     padding: 0 10px;
