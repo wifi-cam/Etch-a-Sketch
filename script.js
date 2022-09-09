@@ -15,6 +15,9 @@ function createGrid(size) {
         const pixel = document.createElement('div');
         pixel.classList.add('pixel');
         pixel.addEventListener('mouseover', draw);
+        pixel.addEventListener('click', function(){
+            pixel.style.backgroundColor = color.value;
+        });
         pixel.style.backgroundColor = '#FFF';
         canvas.insertAdjacentElement('beforeend', pixel);
     }
